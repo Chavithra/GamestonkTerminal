@@ -1,9 +1,8 @@
 TODO
-- command to calculate coverage
-- command to run tests
-- command to run markers
 - example to handle cassette
 - migrate existing tests
+- add markers
+- describe where helpers should be
 
 <!-- PROJECT LOGO -->
 <br />
@@ -36,12 +35,46 @@ TODO
 
 # 1. Gamestonk tests
 
-The purpose of this document is to explain how tests should be handled in the library GamestonkTerminal.
+The purpose of this document is to explain how `GamestonkTerminal` envisions solving the following issues regarding tests  :  
+- Having/Maintaining tests for this tool
+- Running tests for this tool
 
-Gamestonk strive to solve the following issues regarding tests :  
-- Having tests
-- Maintain tests
-- Running tests
+Having/Maintaining tests is about making sure every `GamestonkTerminal` update comes with the right tests.
+
+Running tests is about keeping usable by the contributors.
+
+We will explain the processes and automations designed to solve this issues.
+
+## 1.1. Steps for `PullRequest`
+
+Here are the steps to write proper tests for Gamestonk :
+
+    A. Find right place
+    B. Verify coverage is above 90%
+    C. Set the right markers
+
+**A. Find right place**
+
+Put the code following the same module and package structure than `gamestonk_terminal` package.
+
+**B. Verify coverage is above 90%**
+
+Once you made your `PullRequest` an automation will let you know whether or not you have the proper amount of tests coverage.
+
+You can also run the following command to check your coverage manually :
+- `pytest --cov --cov-fail-under=90`
+
+**C. Set the right markers**
+
+If parts of your have specificities like :
+- being `slow`
+- requiring `network` connectivity
+- requiring `authentication` to `APIs`
+
+Then the proper markers should be sent on each test.
+
+
+The rests of this document is there to provide a deeper comprehension of this steps.
 
 # 2. Having tests
 
@@ -50,7 +83,6 @@ Here we will see how to build tests for GamestonkTerminal.
 In order to build tests we need to know :
 - What to test ?
 - Where to put those tests ?
-- How maintain tests ?
 
 ## 2.1. What to test ?
 Every classes and methods which can be publicly accessed should be tested.
