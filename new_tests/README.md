@@ -104,9 +104,9 @@ NOTES
 - how should it be organised
 - one test file for each class seems easy to track
 - keeping the same folder structure than the `gamestonk_terminal` module seems to make sense
-- what happend to slow tests ?
-- what happend to network tests ?
-- wheat happend to logged in tests ?
+- what happened to slow tests ?
+- what happened to network tests ?
+- wheat happened to logged in tests ?
 
 # 3. Maintain tests
 
@@ -120,7 +120,7 @@ NOTES
 - Do we have coverage indicator running ?
 - We can use pytest-cov
 
-Everytime a PR is made a coverage indicator should be displayed.
+Every time a PR is made a coverage indicator should be displayed.
 
 ## 3.2. What is the PR checklist ?
 
@@ -137,7 +137,7 @@ Provided that the tests where properly built and maintained.
 
 Running them will allow you testing in matter of minutes : dozens of cases that would requires hours to check manually.
 
-This is a powerfull tool : here we will see how to run it.
+This is a powerful tool : here we will see how to run it.
 
 ## 4.1. How to run all the tests ?
 
@@ -157,7 +157,7 @@ Markers can be used to run specific parts of the
 Section `[tool.pytest.ini_options]` of this document contains full list of markers :
 - [pyproject.toml](pyproject.toml)
 
-One can also select run invidual folder or files.
+One can also select run individual folder or files.
 
 TODO
 - explain how to run invidual folder or file
