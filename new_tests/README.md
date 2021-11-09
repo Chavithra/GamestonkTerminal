@@ -160,7 +160,7 @@ Section `[tool.pytest.ini_options]` of this document contains full list of marke
 One can also select run individual folder or files.
 
 TODO
-- explain how to run invidual folder or file
+- explain how to run individual folder or file
 - explain how to run specific markers
-- list the avaialble tags
+- list the available tags
 - put the command : slow, network
