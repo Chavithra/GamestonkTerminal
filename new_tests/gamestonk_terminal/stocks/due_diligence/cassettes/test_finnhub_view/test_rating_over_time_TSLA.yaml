@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.26.0
+    method: GET
+    uri: https://finnhub.io/api/v1/stock/recommendation?symbol=TSLA&token=c23k26qad3ieeb1lftug
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7SUy26DMBBF/2XWRprxA7B37Tq7dJddBEor0VKFZhFV/fdKKC9wPOJhL5HFOfYd
+        ++5+YX86gyMU8N42FThSAr7r40dbgQOJkjKiDAkEdHXTgMsFdD/H9uvw2v+nrp/bflUL6M6f+7YB
+        B2/bzQv8iYvB3gTaE2BiAdpHgWEFaoIg9wQlI6D5AuMJCkaAMSLKmRlMFpThW4TmUVCwEU0R+BHp
+        8AnsfL6fkIrAL5j9y5h86+GZV5wP8TQhHjnkY0aSmS/Oz8cXcDVEawNCtoVGAeEC/LCD4uPLtPgi
+        Al6HHheO6uc+zl5ghgITFMhQQ+Oofu4X8tkJzJKAdNr8VVq8TIundHiyo+qJj1+z+38AAAD//7TW
+        0Q2AMAgE0JWKUsoy7r+G8ctUAsWGW+DlQtqDBN+gPLJ3Hl6x/MDyguU7lmcsf2J57K8t6Rx27lnS
+        T+no3sJ6fTI++b78X4jWbwX5xfej3tHZP3bmMxdPmD9zbjbjB80zsvkjX0p9O59e4HOQn/17f/l+
+        rhsAAP//AwBz0RMkeBAAAA==
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 6af49a652dc0ee2f-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 16 Nov 2021 23:47:12 GMT
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AeSsoSqgvClOzuUVFKe%2FLAi5gYdEKXRIZkku%2B7hZn1My4hWybYZ%2FJM4xvmI7R8d3f%2BTjJxByz8pnhX9vDGLEHfVON6pX3biWrLSHemX3x9bPZRKauuPjWVxJf7sO"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Origin
+      access-control-allow-methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '59'
+      x-ratelimit-reset:
+      - '1637106492'
+    status:
+      code: 200
+      message: OK
+version: 1
