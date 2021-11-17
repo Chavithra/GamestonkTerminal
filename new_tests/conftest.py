@@ -34,6 +34,7 @@ def default_txt_path(request):
 
     return path
 
+
 @pytest.fixture
 def default_json_path(request):
     module = request.node.fspath

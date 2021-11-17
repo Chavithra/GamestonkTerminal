@@ -9,6 +9,16 @@ from gamestonk_terminal.stocks.due_diligence import business_insider_view
 from gamestonk_terminal.stocks.stocks_helper import load
 
 
+@pytest.fixture(scope="module")
+def vcr_config():
+    return {
+        "filter_query_parameters": [
+            ("period1", "1605481200"),
+            ("period2", "1637103600"),
+        ]
+    }
+
+
 @pytest.mark.vcr
 def test_price_target_from_analysts_raw(capsys, default_txt_path):
     business_insider_view.price_target_from_analysts(
@@ -22,10 +32,13 @@ def test_price_target_from_analysts_raw(capsys, default_txt_path):
     )
     captured = capsys.readouterr()
 
+    # with open(file=default_txt_path, mode="w", encoding="utf-8") as f:
+    #     f.write(captured.out)
     with open(file=default_txt_path, mode="r", encoding="utf-8") as f:
         expected_txt = f.read()
 
     assert captured.out.strip() == expected_txt.strip()
+
 
 @pytest.mark.default_cassette("test_price_target_from_analysts_TSLA")
 @pytest.mark.vcr
@@ -35,7 +48,7 @@ def test_price_target_from_analysts_plt(capsys, interval, mocker, start):
     mock_show = mocker.Mock()
     mocker.patch(target="matplotlib.pyplot.show", new=mock_show)
 
-    other_args= ["TSLA"]
+    other_args = ["TSLA"]
     ticker = "TSLA"
     stock = pd.DataFrame()
     _ticker, _start, _interval, stock = load(
@@ -64,6 +77,8 @@ def test_estimates(capsys, default_txt_path):
     business_insider_view.estimates(ticker="TSLA", export=None)
     captured = capsys.readouterr()
 
+    # with open(file=default_txt_path, mode="w", encoding="utf-8") as f:
+    #     f.write(captured.out)
     with open(file=default_txt_path, mode="r", encoding="utf-8") as f:
         expected_txt = f.read()
 

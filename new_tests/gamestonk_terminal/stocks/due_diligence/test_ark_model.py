@@ -10,11 +10,22 @@ import vcr
 from gamestonk_terminal.stocks.due_diligence import ark_model
 
 
+@pytest.fixture(scope="module")
+def vcr_config():
+    return {
+        "filter_query_parameters": [
+            ("period1", "1598220000"),
+            ("period2", "1635980400"),
+        ]
+    }
+
+
 @pytest.mark.default_cassette("test_get_ark_trades_by_ticker_TSLA")
 @pytest.mark.vcr
 def test_get_ark_trades_by_ticker(default_csv_path):
     result_df = ark_model.get_ark_trades_by_ticker(ticker="TSLA")
 
+    # result_df.to_csv(default_csv_path, index=True)
     expected_df = pd.read_csv(default_csv_path, index_col="Date", parse_dates=["Date"])
 
     assert not result_df.empty

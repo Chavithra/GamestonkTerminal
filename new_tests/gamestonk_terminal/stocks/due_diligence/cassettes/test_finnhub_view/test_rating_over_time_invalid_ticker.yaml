@@ -11,7 +11,7 @@ interactions:
       User-Agent:
       - python-requests/2.26.0
     method: GET
-    uri: https://finnhub.io/api/v1/stock/recommendation?symbol=INVALID_TICKER&token=c23k26qad3ieeb1lftug
+    uri: https://finnhub.io/api/v1/stock/recommendation?symbol=INVALID_TICKER&token=MOCK_TOKEN
   response:
     body:
       string: '[]'
@@ -19,7 +19,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 6af49a686bba084f-CDG
+      - 6af95a931ec9ee27-CDG
       Connection:
       - keep-alive
       Content-Length:
@@ -27,13 +27,13 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 16 Nov 2021 23:47:13 GMT
+      - Wed, 17 Nov 2021 13:37:27 GMT
       Expect-CT:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1BDeLK5p0FFN3kvTJrfZmyC%2F8MI6JntkBL9CAg14bAU1PVT3FRR0d3X%2F8WxbF%2FmPYofhRVDk0epagvAPhit3%2FIzPqCQ%2BSW1hJ18zXDk41C53P6PkL1kXjKBfw%2Bwj"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=l2%2Ben0ig0woUNpUv4a5ikdd6twpZZLNy9o4bO1GMkyT2H3OdMxr4UhpZARXs7ovd6E%2FYZFP3kOR95xPGCAj81ZMFjC%2Fxxjg5sccC8DaGc3Y%2BEeKSDUJgT%2Bwk5CV8"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       access-control-allow-credentials:
@@ -52,9 +52,9 @@ interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '58'
+      - '57'
       x-ratelimit-reset:
-      - '1637106492'
+      - '1637156306'
     status:
       code: 200
       message: OK

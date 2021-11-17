@@ -24,9 +24,11 @@ def read_interaction(path: str, index: int):
     # status = response["status"]
     return decompress(body)
 
+
 def write(path, content):
     with open(file=path, mode="w", encoding="utf-8") as f:
         f.write(content)
+
 
 path = "tests/cassettes/test_fa/test_fa_market/test_income.yaml"
 body = read_interaction(path=path, index=0)

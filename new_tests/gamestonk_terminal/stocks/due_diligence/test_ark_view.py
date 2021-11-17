@@ -7,6 +7,16 @@ import pytest
 from gamestonk_terminal.stocks.due_diligence import ark_view
 
 
+@pytest.fixture(scope="module")
+def vcr_config():
+    return {
+        "filter_query_parameters": [
+            ("period1", "1598220000"),
+            ("period2", "1635980400"),
+        ]
+    }
+
+
 @pytest.mark.default_cassette("test_display_ark_trades_INVALID_TICKER")
 @pytest.mark.vcr(record_mode="none")
 def test_display_ark_trades_invalid_ticker(capsys):
@@ -27,6 +37,8 @@ def test_display_ark_trades_default(capsys, default_txt_path):
 
     captured = capsys.readouterr()
 
+    # with open(file=default_txt_path, mode="w", encoding="utf-8") as f:
+    #     f.write(captured.out)
     with open(file=default_txt_path, mode="r", encoding="utf-8") as f:
         expected_txt = f.read()
 
@@ -45,6 +57,8 @@ def test_display_ark_trades_no_tab(capsys, default_txt_path, mocker):
 
     captured = capsys.readouterr()
 
+    # with open(file=default_txt_path, mode="w", encoding="utf-8") as f:
+    #     f.write(captured.out)
     with open(file=default_txt_path, mode="r", encoding="utf-8") as f:
         expected_txt = f.read()
 
