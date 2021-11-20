@@ -8,7 +8,7 @@ from gamestonk_terminal.stocks.due_diligence import finviz_view
 
 
 @pytest.mark.parametrize(
-    "input, expected",
+    "val, expected",
     [
         ("RANDOM_VALUE", "RANDOM_VALUE"),
         ("Upgrade", "\x1b[32mUpgrade\x1b[0m"),
@@ -16,8 +16,8 @@ from gamestonk_terminal.stocks.due_diligence import finviz_view
         ("Reiterated", "\x1b[33mReiterated\x1b[0m"),
     ],
 )
-def test_category_color_red_green(input, expected):
-    result = finviz_view.category_color_red_green(val=input)
+def test_category_color_red_green(val, expected):
+    result = finviz_view.category_color_red_green(val=val)
     assert result == expected
 
 

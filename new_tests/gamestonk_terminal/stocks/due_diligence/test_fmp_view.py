@@ -6,6 +6,7 @@ import pytest
 # IMPORTATION INTERNAL
 from gamestonk_terminal.stocks.due_diligence import fmp_view
 
+
 @pytest.fixture(scope="module")
 def vcr_config():
     return {

@@ -1,9 +1,3 @@
-TODO
-- example to handle cassette
-- migrate existing tests
-- add markers
-- describe where helpers should be
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
